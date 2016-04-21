@@ -4,6 +4,6 @@ class Note
   property :id, Serial
   property :titel, String, required: true
   property :info, Text
-  property :birthday, DataTime, required: true
-  property :creator, String, required: true
+  property :created_at, DateTime, required: true
+  belongs_to :user
 end
