@@ -5,5 +5,7 @@ class Note
   property :titel, String, required: true
   property :info, Text
   property :created_at, DateTime, required: true
-  belongs_to :user
+  #fixa
+
+  belongs_to :user #required
 end

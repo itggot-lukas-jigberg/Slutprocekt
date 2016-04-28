@@ -1,6 +1,7 @@
 class Datetime
+  include DataMapper::Resource
 
   property :id, Serial
-  property :settime, DataTime, required: true
-  property :time, Time, required: true
+  property :date_stamp, DateTime, required: true
+  #belongs_to :note
 end
