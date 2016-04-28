@@ -4,7 +4,11 @@ html{
 body {
     margin: 0px;
     height: 100%;
-    background-color: #3e3f49;
+    background-color: #c9c9c9;
+}
+
+.mdl-navigation__link {
+    color: white;
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
@@ -22,8 +26,11 @@ body {
     border-right: none;
 }
 
-.mdl-navigation__link {
+.mdl-layout__title, .mdl-layout-title {
+    background-color: #f2b632;
     color: white;
+    text-decoration: none;
+    material.indigo-pink.min.css:8
 }
 
 #container {
