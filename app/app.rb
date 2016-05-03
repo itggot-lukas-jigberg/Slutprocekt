@@ -17,6 +17,7 @@ class App < Sinatra::Base
 
   get '/contacts' do
 
+    erb :contacts
   end
 
   get '/invites' do

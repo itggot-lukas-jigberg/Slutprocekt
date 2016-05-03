@@ -4,8 +4,21 @@ html{
 body {
     margin: 0px;
     height: 100%;
-    background-color: white;
+    background-color: #424242;
 }
+
+.demo-card-wide.mdl-card {
+    width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+    color: #fff;
+}
+
 
 
 .ripple,.ripple:before,.ripple:after {
@@ -24,8 +37,8 @@ body {
     content:'';
     position: absolute;
 }
-.ripple:before {-webkit-animation-delay:.2s;-moz-animation-delay:.2s;top:5px;left:25px;}
-.ripple:after {-webkit-animation-delay:.5s;-moz-animation-delay:.8s;top:25px;left:0;}
+.ripple:before {-webkit-animation-delay:.2s;-moz-animation-delay:.2s;top:50px;left:25px;}
+.ripple:after {-webkit-animation-delay:.5s;-moz-animation-delay:.10s;top:50px;left:0;}
 @-webkit-keyframes rip
 {
     0%  {
@@ -92,6 +105,7 @@ body {
     background-color: #252839;
     color: #b5b5b7;
     border-right: none;
+    box-shadow: black;
 }
 
 .mdl-layout__title, .mdl-layout-title {
@@ -150,4 +164,20 @@ ul#notes_list li{
 #account_choice {
     margin: 90%;
     background-color: cornflowerblue;
+}
+
+#contact_info image{
+    width: 30px;
+}
+
+#contact_info{
+    width: 300px;
+    margin: auto;
+    text-align: center;
+
+}
+
+
+#contact_info h1 {
+    font-family: 'Lobster', cursive;
 }
