@@ -6,13 +6,15 @@ class App < Sinatra::Base
   	erb :notes
   end
 
-  get '/login' do
+  get '/welcome' do
 
-    erb :logorsign
+    erb :logorsign, layout: false
   end
 
-  get '/signup' do
+  get '/login' do
 
+
+    erb :login, layout: false
   end
 
   get '/contacts' do

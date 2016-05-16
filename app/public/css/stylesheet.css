@@ -4,7 +4,6 @@ html{
 body {
     margin: 0px;
     height: 100%;
-    background-color: #424242;
 }
 
 .demo-card-wide.mdl-card {
@@ -157,6 +156,34 @@ ul#notes_list li{
 #account_choice {
     margin: 90%;
     background-color: cornflowerblue;
+}
+
+.demo-card-wide.mdl-card.mdl-shadow--4dp{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+}
+
+.demo-card-wide > .mdl-card__title{
+    background-color: #252839;
+}
+
+.welcome_button{
+    float: right;
+    margin-left: 10px;
+}
+
+.back_button{
+    float: left;
+    margin-top: auto;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.create_button{
+    float: right;
+    margin-left: 10px;
 }
 
 #contact_info image{
