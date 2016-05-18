@@ -17,6 +17,16 @@ class App < Sinatra::Base
     erb :login, layout: false
   end
 
+  get '/sign-up' do
+
+    erb :signup, layout: false
+  end
+
+  get '/user' do
+
+    erb :user
+  end
+
   get '/contacts' do
 
     erb :contacts
