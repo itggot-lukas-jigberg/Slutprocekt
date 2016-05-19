@@ -14,8 +14,6 @@ body {
     color: #fff;
 }
 
-
-
 .ripple,.ripple:before,.ripple:after {
     border-radius:2px;
     width:2px;

@@ -2,7 +2,11 @@ class App < Sinatra::Base
   enable :sessions
 
   get '/' do
-
+    if session[:user_id]
+      @user = User.get(session[:user_id])
+    else
+      redirect '/welcome'
+    end
   	erb :notes
   end
 
@@ -12,7 +16,6 @@ class App < Sinatra::Base
   end
 
   get '/login' do
-
 
     erb :login, layout: false
   end
@@ -24,17 +27,62 @@ class App < Sinatra::Base
 
   get '/user' do
 
+    if session[:user_id]
+      @user = User.get(session[:user_id])
+    else
+      redirect '/welcome'
+    end
+
     erb :user
   end
 
   get '/contacts' do
+
+    if session[:user_id]
+      @user = User.get(session[:user_id])
+    else
+      redirect '/welcome'
+    end
 
     erb :contacts
   end
 
   get '/invites' do
 
+    if session[:user_id]
+      @user = User.get(session[:user_id])
+    else
+      redirect '/welcome'
+    end
+
   end
 
+  post '/login' do
+    user = User.first(username: params["username"])
+    if user && user.password == params["password"]
+      session[:user_id] = user.id
+    end
+    redirect '/'
+  end
+
+  post '/sign-up' do
+    if session[:user_id]
+      redirect '/'
+    else
+      if params["password"] == params["password_repeat"]
+        User.create(username: params["username"], mail: params["email"], password: params["password"])
+        redirect '/'
+      else
+        redirect '/sign-up'
+      end
+    end
+  end
+
+  post '/logout' do
+    p session
+    session.destroy
+    p session
+    redirect '/'
+  end
 
 end
