@@ -19,35 +19,42 @@
 </style>
 
 <div class="demo-card-wide mdl-card mdl-shadow--4dp">
-
   <form action="/sign-up" method="post">
-    <input class="" name="username" placeholder="Username" type="username">
-    <input class="" name="password" placeholder="Password" type="password">
-    <input class="" name="password_repeat" placeholder="Repeat Password" type="password">
-    <input class="" name="email" placeholder="Email" type="email">
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label first_textfield">
+      <input class="mdl-textfield__input" name="username" type="username">
+      <label class="mdl-textfield__label" for="sample3">Username</label>
+    </div>
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" name="password" type="password">
+      <label class="mdl-textfield__label" for="sample3">Password</label>
+    </div>
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" name="password_repeat" type="password">
+      <label class="mdl-textfield__label" for="sample3">Repeat Password</label>
+      </div>
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" name="email" type="email">
+      <label class="mdl-textfield__label" for="sample3">Email</label>
+      </div>
     <div class="welcome_button">
         <button class="mdl-button mdl-js-button mdl-button--raised">
-          Create
+          Register
         </button>
     </div>
+
+    <div class="back_button">
+      <a href="/welcome">
+        <button class="mdl-button mdl-js-button mdl-button--raised" type="button">
+          <i class="material-icons">arrow_back</i>
+        </button>
+      </a>
+    </div>
+
   </form>
-
-  <div class="welcome_button">
-    <a href="/">
-      <button class="mdl-button mdl-js-button mdl-button--raised">
-        Create
-      </button>
-    </a>
-  </div>
-
-  <div class="back_button">
-    <a href="/welcome">
-      <button class="mdl-button mdl-js-button mdl-button--raised">
-        <i class="material-icons">arrow_back</i>
-      </button>
-    </a>
-  </div>
-
 </div>
 
 </body>

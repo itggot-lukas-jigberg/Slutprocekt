@@ -71,7 +71,7 @@ class App < Sinatra::Base
     else
       if params["password"] == params["password_repeat"]
         User.create(username: params["username"], mail: params["email"], password: params["password"])
-        redirect '/'
+        redirect '/login'
       else
         redirect '/sign-up'
       end

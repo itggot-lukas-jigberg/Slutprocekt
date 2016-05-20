@@ -1,6 +1,4 @@
-html{
-    height: calc(100% - 8px);
-}
+
 body {
     margin: 0px;
     height: 100%;
@@ -201,7 +199,7 @@ ul#notes_list li{
     margin-top: auto;
 }
 
-#contact_info{
+.div_center{
     color: white;
     position: relative;
     top: 40%;
@@ -222,9 +220,54 @@ ul#notes_list li{
 
 .page-content{
     height: 100%;
+    margin-bottom: 0;
+    margin-top: -24px;
 }
 
-#contact_info h1 {
+.div_center h1 {
     font-family: 'Lobster', cursive;
     margin: 0;
+}
+
+.div_center h2 {
+    font-size: 56px;
+}
+
+.logout {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.logout_button{
+    color: #f2b632;
+}
+
+.mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab {
+    color: rgb(255,255,255);
+    background-color: #f2b632;
+}
+
+.mdl-textfield{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.mdl-textfield__label{
+    color: black;
+}
+
+.mdl-textfield--floating-label{
+    border: black;
+}
+
+.first_textfield{
+    margin-top: 20px;
+}
+
+.login_button {
+    float: right;
+    position: relative;
+    margin-right: 10px;
 }

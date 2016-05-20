@@ -12,39 +12,43 @@
 
 <body>
 
-  <style>
-    body{
-      background-color: #eeedef;
-    }
-  </style>
+<style>
+  body {
+    background-color: #eeedef;
+  }
+</style>
 
 <div class="demo-card-wide mdl-card mdl-shadow--4dp">
 
   <form action="/login" method="post">
-    <input class="" name="username" placeholder="Username" type="username">
-    <input class="" name="password" placeholder="Password" type="password">
-    <div class="welcome_button">
-        <button class="mdl-button mdl-js-button mdl-button--raised">
-          Login
-        </button>
-    </div>
-  </form>
 
-  <div class="welcome_button">
-    <a href="/">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label first_textfield">
+      <input class="mdl-textfield__input" name="username" type="username">
+      <label class="mdl-textfield__label" for="sample3">Username</label>
+    </div>
+
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" name="password" type="password">
+      <label class="mdl-textfield__label" for="sample3">Password</label>
+    </div>
+
+    <div class="login_button">
       <button class="mdl-button mdl-js-button mdl-button--raised">
         Login
       </button>
-    </a>
-  </div>
+    </div>
 
-  <div class="back_button">
     <a href="/welcome">
-      <button class="mdl-button mdl-js-button mdl-button--raised">
-        <i class="material-icons">arrow_back</i>
-      </button>
-    </a>
-  </div>
+    <div class="back_button">
+        <button class="mdl-button mdl-js-button mdl-button--raised" type="button">
+          <i class="material-icons">arrow_back</i>
+        </button>
+    </div>
+      </a>
+
+  </form>
+
+
 
 </div>
 
