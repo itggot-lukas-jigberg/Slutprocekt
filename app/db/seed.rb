@@ -10,7 +10,7 @@ class Seeder
   end
 
   def self.notes
-    Note.create(titel: 'Köpa Kazoo', info: 'ville tycker att han ska köpa en kazo på torget', time_stamp: 'bajs',user_id: 1 )
+    Note.create(titel: 'Köpa Kazoo', info: 'ville tycker att han ska köpa en kazo på torget', time_stamp: '5',user_id: 1 )
   end
 
   def self.datetime

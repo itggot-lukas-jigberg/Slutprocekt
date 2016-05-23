@@ -4,7 +4,7 @@ class Note
   property :id, Serial
   property :titel, String, required: true
   property :info, Text
-  property :created_at, DateTime, required: true
+  property :time_stamp, DateTime, required: true
   #fixa
 
   belongs_to :user #required

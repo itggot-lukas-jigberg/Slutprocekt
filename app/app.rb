@@ -7,7 +7,7 @@ class App < Sinatra::Base
     else
       redirect '/welcome'
     end
-  	erb :notes
+    erb :notes
   end
 
   get '/welcome' do
@@ -61,8 +61,10 @@ class App < Sinatra::Base
     user = User.first(username: params["username"])
     if user && user.password == params["password"]
       session[:user_id] = user.id
+      redirect '/'
+    else
+      redirect '/login'
     end
-    redirect '/'
   end
 
   post '/sign-up' do
@@ -70,13 +72,32 @@ class App < Sinatra::Base
       redirect '/'
     else
       if params["password"] == params["password_repeat"]
-        User.create(username: params["username"], mail: params["email"], password: params["password"])
-        redirect '/login'
-      else
+        user = User.create(username: params["username"], mail: params["email"], password: params["password"])
+        if User.get(user.id)
+          session[:user_id] = user.id
+          redirect '/login'
+        end
         redirect '/sign-up'
       end
     end
   end
+
+  # post '/sign-up' do
+  #   if session[:user_id]
+  #     redirect '/'
+  #   else
+  #     if 5 < params["password"].length && params["password"].length < 16
+  #       if params["password"] == params["password_repeat"]
+  #         User.create(username: params["username"], mail: params["email"], password: params["password"])
+  #         redirect '/login'
+  #       else
+  #         redirect '/sign-up'
+  #       end
+  #     else
+  #       redirect '/sign-up'
+  #     end
+  #   end
+  # end
 
   post '/logout' do
     p session
