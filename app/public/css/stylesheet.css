@@ -271,3 +271,15 @@ ul#notes_list li{
     position: relative;
     margin-right: 10px;
 }
+
+.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect{
+    position: fixed;
+    background-color: #f2b632;
+    color: white;
+    bottom: 15px;
+    right: 15px;
+}
+
+.mdl-button:hover{
+    background-color: #f2b632;
+}

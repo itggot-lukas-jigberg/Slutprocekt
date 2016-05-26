@@ -1,13 +1,32 @@
 class App < Sinatra::Base
   enable :sessions
 
-  get '/' do
-    if session[:user_id]
-      @user = User.get(session[:user_id])
+  accessible = ['/welcome', '/login', '/sign-up']
+
+
+  before do
+    if accessible.include?(request.path_info)
+
+      if session[:user_id]
+        redirect '/user'
+      end
+
     else
-      redirect '/welcome'
+
+      unless session[:user_id]
+        redirect '/welcome'
+      end
     end
+  end
+
+  get '/' do
+
     erb :notes
+  end
+
+  get '/create-notis' do
+
+    erb :create
   end
 
   get '/welcome' do
@@ -27,32 +46,16 @@ class App < Sinatra::Base
 
   get '/user' do
 
-    if session[:user_id]
-      @user = User.get(session[:user_id])
-    else
-      redirect '/welcome'
-    end
-
     erb :user
   end
 
   get '/contacts' do
-
-    if session[:user_id]
-      @user = User.get(session[:user_id])
-    else
-      redirect '/welcome'
-    end
 
     erb :contacts
   end
 
   get '/invites' do
 
-    if session[:user_id]
-      @user = User.get(session[:user_id])
-    else
-      redirect '/welcome'
     end
 
   end
@@ -82,22 +85,6 @@ class App < Sinatra::Base
     end
   end
 
-  # post '/sign-up' do
-  #   if session[:user_id]
-  #     redirect '/'
-  #   else
-  #     if 5 < params["password"].length && params["password"].length < 16
-  #       if params["password"] == params["password_repeat"]
-  #         User.create(username: params["username"], mail: params["email"], password: params["password"])
-  #         redirect '/login'
-  #       else
-  #         redirect '/sign-up'
-  #       end
-  #     else
-  #       redirect '/sign-up'
-  #     end
-  #   end
-  # end
 
   post '/logout' do
     p session
@@ -105,5 +92,3 @@ class App < Sinatra::Base
     p session
     redirect '/'
   end
-
-end
