@@ -4,6 +4,10 @@ body {
     height: 100%;
 }
 
+a{
+    text-decoration: none;
+}
+
 .demo-card-wide.mdl-card {
     width: 512px;
 }
@@ -276,10 +280,118 @@ ul#notes_list li{
     position: fixed;
     background-color: #f2b632;
     color: white;
-    bottom: 15px;
-    right: 15px;
+    bottom: 20px;
+    right: 20px;
 }
 
-.mdl-button:hover{
+.hover-color{
+    background-color: #f2b631;
+}
+
+.create_window{
+    margin: 35px;
+    background-color: #eeedef;
+    height: calc(100% - 70px);
+}
+
+.color_band{
+    height: 56px;
     background-color: #f2b632;
+    width: 100%;
+}
+
+.back_button2{
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #eeedef;
+}
+
+.create_form{
+    height: 100%;
+    width: 100%;
+}
+
+.create_button{
+    background-color: #66cc44;
+    float: right;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.delete_button{
+    background-color: #ff0000;
+    float: right;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.share_button{
+    background-color: #3C599B;
+    float: right;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.create_titel{
+    margin-left: 20px;
+    width: 200px;
+    margin-right: 0px;
+    display: table;
+}
+
+.switch{
+    float: right;
+    margin-right: 40px;
+    margin-top: 16px;
+}
+
+.create_textfield{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.choose_occurrence{
+    float: left;
+    position: absolute;
+    left: 55px;
+}
+
+.choose_button{
+
+}
+
+.add_user{
+    height: 68px;
+}
+
+.notes_container{
+    float: right;
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.note_brick{
+    background-color: #252839;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.note_titel{
+    color: #b5b5b7;
+    font-size: 35px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.material-icons{
+    color: white;
 }

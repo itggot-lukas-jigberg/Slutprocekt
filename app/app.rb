@@ -13,9 +13,12 @@ class App < Sinatra::Base
 
     else
 
-      unless session[:user_id]
+      if session[:user_id]
+        @user = User.get(session[:user_id])
+      else
         redirect '/welcome'
       end
+
     end
   end
 
@@ -56,8 +59,12 @@ class App < Sinatra::Base
 
   get '/invites' do
 
-    end
+    erb :invites
+  end
 
+  get '/share' do
+
+    erb :share
   end
 
   post '/login' do
@@ -85,6 +92,15 @@ class App < Sinatra::Base
     end
   end
 
+  post '/create_note' do
+    note = Note.create(titel: params["titel"], info: params["information"], time_stamp: params["time"], user_id: @user.id)
+    redirect "/note/#{note.id}"
+  end
+
+  get '/note/:note_id' do |note_id|
+    @note =
+    erb :note
+  end
 
   post '/logout' do
     p session
@@ -92,3 +108,4 @@ class App < Sinatra::Base
     p session
     redirect '/'
   end
+end

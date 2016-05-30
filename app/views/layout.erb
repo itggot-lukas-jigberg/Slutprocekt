@@ -18,24 +18,25 @@
     background-color: #464646;
   }
 </style>
+
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
   <div class="mdl-layout__drawer mdl-shadow--8dp">
-    <a class="mdl-layout-title" href="/user"><span class="ripple"></span><span class="ripple-position"><%=@user.username%></span></a>
+    <a class="mdl-layout-title" href="/user"><span class="ripple"></span><span class="ripple-position"><%= @user.username %></span></a>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="/">Notis</a>
-      <a class="mdl-navigation__link" href="">Invites</a>
+      <a class="mdl-navigation__link" href="/invites">Invites</a>
       <a class="mdl-navigation__link" href="/contacts">Contact</a>
     </nav>
     <div id="unicorn_stable">
       <img class="small_unicorn" src="/img/small_unicorn.png">
+
       <h1>UnicornPixels</h1>
     </div>
   </div>
 
 
-
   <main class="mdl-layout__content">
-      <%= yield %>
+    <%= yield %>
   </main>
 </div>
 

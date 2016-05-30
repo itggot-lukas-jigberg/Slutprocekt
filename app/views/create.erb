@@ -1,0 +1,58 @@
+<div class="create_window">
+
+  <form class="create_form" action="/create_note" method="post">
+
+    <div class="color_band">
+
+      <a href="/">
+        <div class="back_button2">
+          <button class="mdl-button mdl-js-button mdl-button--raised" type="button">
+            <i class="material-icons">arrow_back</i>
+          </button>
+        </div>
+      </a>
+
+        <div class="create_button">
+          <button class="mdl-button mdl-js-button mdl-button--raised" type="submit">
+            <i class="material-icons">check</i>
+          </button>
+        </div>
+
+        <div class="delete_button">
+          <button class="mdl-button mdl-js-button mdl-button--raised" type="button">
+            <i class="material-icons">delete</i>
+          </button>
+        </div>
+
+        <div class="share_button">
+          <button class="mdl-button mdl-js-button mdl-button--raised" type="button">
+            <i class="material-icons">share</i>
+          </button>
+        </div>
+
+      <div class="switch">
+        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+          <input type="checkbox" id="switch-2" class="mdl-switch__input">
+          <span class="mdl-switch__label"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="mdl-textfield mdl-js-textfield create_titel">
+      <input class="mdl-textfield__input create_text_field" name="titel" type="text" id="sample1">
+      <label class="mdl-textfield__label" for="sample1">Titel</label>
+    </div>
+
+      <div class="mdl-textfield mdl-js-textfield create_textfield">
+        <textarea class="mdl-textfield__input" type="text" name="information" rows= "5" id="sample5" ></textarea>
+        <label class="mdl-textfield__label" for="sample5">Information</label>
+      </div>
+
+    <div class="choose_occurrence">
+      <label for="sample2">Time</label>
+      <input type="datetime" name="time" id="sample1">
+    </div>
+
+  </form>
+
+</div>
