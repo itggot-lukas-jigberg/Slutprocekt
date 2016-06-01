@@ -1,3 +1,11 @@
-<a href="/share"><button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect hover-color">
-  <i class="material-icons">share</i>
-</button></a>
+<div class="notes_container">
+  <% for note in @user.notes %>
+      <a href="/note/<%= note.id %>">
+        <div class="note_brick mdl-shadow--4dp">
+          <h1 class="note_titel"><%= note.titel %></h1>
+          <p class="note_description"><%= note.info %></p>
+          <%= note.time_stamp %>
+        </div>
+      </a>
+  <% end %>
+</div>

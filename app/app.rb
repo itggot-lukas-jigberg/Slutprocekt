@@ -117,4 +117,8 @@ class App < Sinatra::Base
     p session
     redirect '/'
   end
+
+  post '/delete_note' do
+
+  end
 end
