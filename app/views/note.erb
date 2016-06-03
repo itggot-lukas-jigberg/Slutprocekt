@@ -1,19 +1,20 @@
 <div class="mdl-shadow--4dp note_window">
 
   <a href="/">
-    <div class="back_button2">
+    <div class="back_button3">
       <button class="mdl-button mdl-js-button mdl-button--raised" type="button">
         <i class="material-icons">arrow_back</i>
       </button>
     </div>
   </a>
 
-  <form action="/delete_note">
+  <form action="/delete_note" method="post">
     <div class="delete_button note_delete_button">
-      <button class="mdl-button mdl-js-button mdl-button--raised" type="button">
+      <button class="mdl-button mdl-js-button mdl-button--raised" type="submit">
         <i class="material-icons">delete</i>
       </button>
     </div>
+    <input type="hidden" name="note_id" value="<%= @note.id %>"></input>
   </form>
 
   <div class="note_author_container">

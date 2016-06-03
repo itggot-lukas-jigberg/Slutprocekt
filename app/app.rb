@@ -119,6 +119,11 @@ class App < Sinatra::Base
   end
 
   post '/delete_note' do
-
+    note = Note.get(params["note_id"].to_i)
+    if note and note.user == @user
+      note.destroy!
+    end
+    redirect "/"
   end
+
 end

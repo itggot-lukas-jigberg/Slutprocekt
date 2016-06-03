@@ -9,7 +9,7 @@ a{
 }
 
 .demo-card-wide.mdl-card {
-    width: 512px;
+    width: 50%;
 }
 
 .demo-card-wide > .mdl-card__menu {
@@ -209,7 +209,7 @@ ul#notes_list li{
     top: 40%;
     transform: translateY(-50%);
     margin: auto;
-    width: 50%;
+    width: auto;
     text-align: center;
     margin-bottom: 25% !important;
 }
@@ -231,10 +231,6 @@ ul#notes_list li{
 .div_center h1 {
     font-family: 'Lobster', cursive;
     margin: 0;
-}
-
-.div_center h2 {
-    font-size: 56px;
 }
 
 .logout {
@@ -301,6 +297,14 @@ ul#notes_list li{
 }
 
 .back_button2{
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #eeedef;
+}
+
+.back_button3{
     float: left;
     margin-bottom: 10px;
     margin-left: 10px;
@@ -387,6 +391,8 @@ ul#notes_list li{
     background-color: #252839;
     text-decoration: none;
     border-radius: 10px;
+    width: 100%;
+    height: 100%;
 }
 
 .note_titel{
@@ -409,11 +415,10 @@ ul#notes_list li{
     height: calc(100% - 70px);
     width: calc(100% - 70px);
     border-radius: 10px;
-    position: absolute;
 }
 
 .share_with_someone{
-    width: 100%;
+    width: calc(100% - 70px);
     height: 150px;
     background-color: #eeedef;
     position: absolute;
@@ -461,7 +466,7 @@ ul#notes_list li{
 
 .note_delete_button{
     margin-right: 15px !important;
-    margin-top: 15px !important;
+    margin-top: 10px !important;
 }
 
 .note_author_container{
@@ -474,4 +479,103 @@ ul#notes_list li{
 .note_author{
     font-size: 18px;
     margin-top: 9px;
+}
+
+.user_username{
+    text-align: center;
+    font-size: 56px;
+    margin: 0;
+}
+
+.note_time{
+    color: #eeedef;
+    font-size: 16px;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.mdl-layout__drawer-button{
+    color: #eeedef;
+}
+
+.accept_dont{
+    width: 158px;
+    height: 56px;
+    margin-top: 5px;
+    float: right;
+}
+
+.example{
+    font-size: 15px;
+    margin: 0;
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+    .notes_container {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        float: none;
+    }
+
+    .note_titel {
+        font-size: 25px;
+        margin-top: 25px;
+    }
+
+    .inside_note_information {
+        margin-left: 25px;
+    }
+
+    .inside_note_textfield {
+        width: 75%;
+    }
+
+    .note_author_container {
+        position: absolute;
+        bottom: 120px;
+        left: 45px;
+    }
+
+    .inside_note_title{
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .mdl-textfield__input{
+        width: 200px;
+    }
+
+    .create_window{
+        margin: 0;
+        height: 100%;
+    }
+
+    .back_button2{
+        margin-left: 60px;
+    }
+
+    .note_window{
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+        height: 100%;
+    }
+
+    .inside_note_information{
+
+    }
+
+    .share_with_someone{
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+
 }

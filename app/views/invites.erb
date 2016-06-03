@@ -1,11 +1,30 @@
-<div class="notes_container">
-  <% for note in @user.notes %>
-      <a href="/note/<%= note.id %>">
-        <div class="note_brick mdl-shadow--4dp">
-          <h1 class="note_titel"><%= note.titel %></h1>
-          <p class="note_description"><%= note.info %></p>
-          <%= note.time_stamp %>
-        </div>
-      </a>
-  <% end %>
-</div>
+<!--<div class="notes_container">-->
+  <!--<% for note in @user.notes %>-->
+      <!--<a href="/note/<%= note.id %>">-->
+        <!--<div class="note_brick mdl-shadow&#45;&#45;4dp">-->
+
+          <!--<div class="accept_dont">-->
+            <!--<form action="/delete_note">-->
+              <!--<div class="delete_button note_delete_button">-->
+                <!--<button class="mdl-button mdl-js-button mdl-button&#45;&#45;raised" type="button">-->
+                  <!--<i class="material-icons">delete</i>-->
+                <!--</button>-->
+              <!--</div>-->
+            <!--</form>-->
+
+            <!--<form>-->
+              <!--<div class="create_button">-->
+                <!--<button class="mdl-button mdl-js-button mdl-button&#45;&#45;raised" type="submit">-->
+                  <!--<i class="material-icons">check</i>-->
+                <!--</button>-->
+              <!--</div>-->
+            <!--</form>-->
+          <!--</div>-->
+
+          <!--<h1 class="note_titel"><%= note.titel %></h1>-->
+          <!--<p class="note_description"><%= note.info %></p>-->
+          <!--<h1 class="note_time" ><%= note.time_stamp %></h1>-->
+        <!--</div>-->
+      <!--</a>-->
+  <!--<% end %>-->
+<!--</div>-->
